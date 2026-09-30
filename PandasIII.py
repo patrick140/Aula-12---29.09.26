@@ -6,4 +6,5 @@ dicionario = {"nome": ["joão", "maria", "pedro", "alex", "juliana", "marcos"],
 
 df = pd.DataFrame(dicionario)
 
-df.to_csv("alunos.csv", index=False, sep=";")
+#exportando o dataframe para um arquivo CSV
+df.to_csv("alunos.csv", index=False, sep=";") #sep indica que o simbolo ; indica a separação das colunas

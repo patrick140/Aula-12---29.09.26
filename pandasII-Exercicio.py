@@ -5,6 +5,17 @@
 import pandas as pd 
 
 dicionario = {"nome": ["Geronimo", "martha", "patroclos", "tiberios", "janaina", "mercedes"], 
-              "cargo": ["gerente", "gerente", "vendedor", "secretario", "vendedora", "vendedor"], "salario": [9600.56, 9600.56, 2600.90, 4500.45, 2600.90, 2600.90]}
+              "cargo": ["gerente", "gerente", "vendedor", "secretario", "vendedora", "vendedor"], 
+              "salario": [9600.56, 9600.56, 2600.90, 4500.45, 2600.90, 2600.90]}
+
+df = pd.DataFrame(dicionario)
+
+print(df[df["salario"] > 3000.00])
+
+print(df[df["cargo"] == "vendedor"])
+
+print(df[(df["cargo"] == "vendedor") | (df["cargo"] == "vendedora")])
+
+df.to_csv("pandas exercicio 2.csv", index=False, sep=";")
 
 
